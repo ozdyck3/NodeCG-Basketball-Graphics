@@ -1,4 +1,4 @@
-# generated-bundle
-A Generated Bundle using generator-nodecg
+# NodeCG Basketball Graphics
+A bundle for NodeCG with Basketball graphics
 
-This is hopefully a temporary measure while generator-nodecg is offline from npm
+
