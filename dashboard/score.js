@@ -22,14 +22,20 @@ nameUpdate();
 }
 
 //On button click, add score and update
-function scoreTeam1(){
-    score1++;
+function scoreTeam1(sc){
+    lScore = Number(scoreOne.value) + Number(sc);
+    console.log(lScore);
+    scoreOne.value = lScore;
     update();
+    console.log(score1);
 }
 //On button click, add score and update
-function scoreTeam2(){
-    score2++;
+function scoreTeam2(sc){
+    lScore = Number(scoreTwo.value) + Number(sc);
+    console.log(lScore);
+    scoreTwo.value = lScore;
     update();
+    console.log(score2);
 }
 //reset the scores and replicants to zero
 function reset(){

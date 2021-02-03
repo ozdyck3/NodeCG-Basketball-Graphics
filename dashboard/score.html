@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
 	<style>
-		.container{
-			display:flex;
-		}
+
 		.monospace {
 			font-family: monospace;
 		}
@@ -15,31 +14,49 @@
 			width: 40px;
 		}
 		.Team{
-			display: flex;
+			/* display: flex;
 			flex-direction: column;
 			height: 50%;
-			width: 50%;
+			width: 50%; */
+		}
+		
+		.animateButton{
+			display: block;
+			margin: 0 auto;
+			padding: 10%;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
+	<div class='col-xs-3'>
 	<div class="Team" id="teamOne">
 		<p>Team One</p>
-	<input class="textbox-panel" type="text" id="scoreOnePanel">
+	<input class="teamNameInput form-control" type="text" id="teamNameOne">
+	<input class="textbox-panel form-control" type="text" id="scoreOnePanel">
+	<button class="scoreButton btn btn-primary btn-block" onclick="scoreTeam1(Number(1))">1</button>
+	<button class="scoreButton btn btn-primary btn-block" onclick="scoreTeam1(Number(2))">2</button>
+	<button class="scoreButton btn btn-primary btn-block" onclick="scoreTeam1(Number(3))">3</button>
+	<button class="scoreButton btn btn-primary btn-block" onclick="scoreTeam1(Number(-1))">-1</button>
 	</div>
+	</div>
+</div>
+<div class="container">
+	<div class='col-xs-3'>
 	<div class="Team" id="teamTwo">
 		<p>Team Two</p>
-	<input class="textbox-panel" type="text" id='scoreTwoPanel'>
+	<input type="text" class="teamNameInput form-control" id="teamNameTwo">
+	<input class="textbox-panel form-control" type="text" id='scoreTwoPanel'>
+	<button class="scoreButton btn btn-primary btn-block" onclick="scoreTeam2(Number(1))">1</button>
+	<button class="scoreButton btn btn-primary btn-block" onclick="scoreTeam2(Number(2))">2</button>
+	<button class="scoreButton btn btn-primary btn-block" onclick="scoreTeam2(Number(3))">3</button>
+	<button class="scoreButton btn btn-primary btn-block" onclick="scoreTeam2(Number(-1))">-1</button>
 	</div>
-	<button onclick='reset()'>Reset</button>
-	<button onclick='animateOut()'>Animate Out</button>
-	<button onclick='animateIn()'>Animate In</button>
 	</div>
-	<div class="container">
-		<input class="teamNameInput" type="text" id="teamNameOne">
-		<input type="text" class="teamNameInput" id="teamNameTwo">
 	</div>
+	<button class="btn btn-warning animateButton" onclick='animateOut()'>Animate Out</button>
+	<button class="btn btn-warning animateButton" onclick='animateIn()'>Animate In</button>
+	<button class="btn btn-danger"onclick='reset()'>Reset</button>
 </body>
 <script src="score.js" type="text/javascript"></script>
 </html>

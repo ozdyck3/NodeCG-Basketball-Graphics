@@ -13,7 +13,7 @@
       {
         "name": "Scoreboard",
         "title": "Scoreboard",
-        "width": 3,
+        "width": 5,
         "file": "score.html",
         "headerColor": "#525F78"
       }
