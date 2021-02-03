@@ -1,5 +1,5 @@
 {
-  "name": "generated-bundle",
+  "name": "Basketball",
   "version": "0.0.0",
   "files": [
     "dashboard",
@@ -11,16 +11,16 @@
     "compatibleRange": "^1.1.1",
     "dashboardPanels": [
       {
-        "name": "panel",
-        "title": "Panel",
-        "width": 2,
-        "file": "panel.html",
+        "name": "Scoreboard",
+        "title": "Scoreboard",
+        "width": 3,
+        "file": "score.html",
         "headerColor": "#525F78"
       }
     ],
     "graphics": [
       {
-        "file": "index.html",
+        "file": "score.html",
         "width": 1920,
         "height": 1080
       }
