@@ -16,6 +16,13 @@
         "width": 5,
         "file": "score.html",
         "headerColor": "#525F78"
+      },
+      {
+        "name": "Game Notes",
+        "title": "Game Notes",
+        "width": 5,
+        "file": "gamenotes.html",
+        "headerColor": "#525F78"
       }
     ],
     "graphics": [
