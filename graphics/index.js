@@ -4,11 +4,12 @@ const team2Rep = nodecg.Replicant('team2');
 const team1NameRep = nodecg.Replicant('team1Name');
 const team2NameRep = nodecg.Replicant('team2Name');
 
-const team1El = document.getElementById('scoreOne');
-const team2El = document.getElementById('scoreTwo');
+const team1El = document.getElementById('scoreOneText');
+const team2El = document.getElementById('scoreTwoText');
 
 const team1NameEl = document.getElementById('nameOne');
 const team2NameEl = document.getElementById('nameTwo');
+
 
 team1Rep.on('change', (newVal) => {
     team1El.innerHTML = newVal;
@@ -27,9 +28,14 @@ team2NameRep.on('change', (newVal) =>{
 });
 
 nodecg.listenFor('animateout', () => {
-    $('.scoreboard').animate({bottom: '-250px'});
+    $('.text').animate({opacity:0});
+    $('.scoreboard').animate({height:'0px'});
+    $('.scoreboard').animate({opacity:'0'});
 })
 
 nodecg.listenFor('animatein', () => {
-    $('.scoreboard').animate({bottom:'20px'});
+    $('.scoreboard').animate({opacity:'1'});
+    $('.scoreboard').animate({height:'100px'});
+    $('.text').animate({opacity:1});
+    $('.team').animate({width:'35%'});
 })

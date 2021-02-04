@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js" defer></script>
     <style>
         *{
             margin:0;
@@ -12,6 +13,7 @@
             font-family:Arial, Helvetica, sans-serif;
             font-weight: 900;
         }
+
         .inner{
             width: 1920px;
             height: 1080px;
@@ -20,11 +22,12 @@
         }
         .scoreboard{
             position: absolute;
+            opacity: 0;
             width: 45%;
-            height: 100px;
+            height: 0px;
             display: flex;
             font-size: 30px;
-            bottom: -250px;
+            bottom: 25px;
             background: rgb(0,0,0);
             background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 54%, rgba(0,0,0,1) 100%);
         }
@@ -105,6 +108,10 @@
             z-index: 100;
         }
 
+        .text{
+            opacity: 0;
+        }
+
     </style>
     <title>Document</title>
 </head>
@@ -113,36 +120,35 @@
         <div class="scoreboard">
             <div class="team" id="teamOne">
                 <div class="team-data" id="teamOne">
-                <div class="team-name" id="nameOne">
+                <div class="team-name text" id="nameOne">
                 PogChamps
                 </div>
-                <div class="TO" id="TOLeft">
+                <div class="TO text" id="TOLeft">
                     TO: 4
                 </div>
                 </div>
             </div>
 
             <div class="score" id="scoreOne">
-                
+                <span class='text' id='scoreOneText'></span>
                 </div>
             <div class="info-box" id="box">
 
             </div>
                 <div class="score" id="scoreTwo">
-                    
+                    <span class='text' id="scoreTwoText"></span>
                 </div>
             <div class="team" id="teamTwo">
                 <div class="team-data" id="teamTwo">
-                    <div class="team-name" id="nameTwo">
+                    <div class="team-name text" id="nameTwo">
                         PogChamps
                         </div>
-                    <div class="TO" id="TORight">
+                    <div class="TO text" id="TORight">
                         TO: 4
                     </div>
                     </div>
             </div>
         </div>
 	</div>
-	<script src="index.js"></script>
 </body>
 </html>
