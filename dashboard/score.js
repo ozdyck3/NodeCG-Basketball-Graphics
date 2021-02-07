@@ -4,6 +4,9 @@ const team2Rep = nodecg.Replicant('team2', {defaultValue: 0});
 //Team Names REPLICANTS
 const team1NameRep = nodecg.Replicant('team1Name', {defaultValue: "PogChamps"});
 const team2NameRep = nodecg.Replicant('team2Name', {defaultValue: "Poggers"});
+//Team Colors REPLICANTS
+const team1ColorRep = nodecg.Replicant('team1Color');
+const team2ColorRep = nodecg.Replicant('team2Color');
 //Team Scores LOCAL
 const scoreOne = document.getElementById('scoreOnePanel');
 const scoreTwo = document.getElementById('scoreTwoPanel');
@@ -13,7 +16,9 @@ const NameTwo = document.getElementById('teamNameTwo');
 //Set team names to the Replicants if already populated
 var name1 = team1NameRep;
 var name2 = team2NameRep;
-
+//team colors LOCAL
+var color1 = team1ColorRep;
+var color2 = team2ColorRep;
 //On load, reset the scores, update the replicants, and change the names
 window.onload = function(){
 reset();
@@ -59,6 +64,14 @@ function nameUpdate(){
     team1NameRep.value = name1;
     team2NameRep.value = name2;
 }
+//Update Colors
+function colorUpdate(){
+    color1 = document.getElementById("teamOneColor").value;
+    color2 = document.getElementById("teamTwoColor").value;
+    team1ColorRep.value = color1;
+    team2ColorRep.value = color2;
+    console.log(team1ColorRep)
+}
 //Tell web page to animate in or out
 function animateOut(){
     nodecg.sendMessage('animateout');
@@ -73,3 +86,6 @@ $("#scoreTwoPanel").change(function() {update();})
 
 $("#teamNameOne").change(function() {nameUpdate();})
 $("#teamNameTwo").change(function() {nameUpdate();})
+
+$('#teamOneColor').change(function() {colorUpdate();})
+$('#teamTwoColor').change(function() {colorUpdate();})
